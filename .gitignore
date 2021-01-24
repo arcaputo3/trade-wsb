@@ -5,3 +5,7 @@ env/*
 scrapes/*
 
 URS.egg-info/*
+
+docker-compose.override.yml
+*.csv
+*.ipynb
