@@ -1,5 +1,12 @@
+# How to use trade-wsb:
+1. Download and install Docker
+2. Write all necessary keys to `docker-compose.yml` file (below documentation will be helpful)
+3. Run `docker-compose build`
+4. Run `docker-compose up`
+5. Navigate to browser and run `localhost:9656/scrape_subreddit`
+6. Run `localhost:9656/SentimentModel/rebalance` to execute WSB trades using latest scrape
 
-
+Feel free to fork and add your own models and play around with `app.py`. This repo is messy and was built quickly, so it is prone to bugs. Huge shoutout to @JosephLai241 for making this impossible. Feel free to PR, although I likely won't be maintaining this closely.
 
 # Please See Below for all URS related documentation!
      __  __  _ __   ____  
