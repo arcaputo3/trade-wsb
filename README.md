@@ -1,5 +1,15 @@
+# How to use trade-wsb:
+0. Create a https://reddit.com account and a https://alpaca.markets/ account
+1. Download and install Docker
+2. Write all necessary keys to `docker-compose.yml` file (below documentation will be helpful)
+3. Run `docker-compose build`
+4. Run `docker-compose up`
+5. Navigate to browser and run `localhost:9656/scrape_subreddit`
+6. Run `localhost:9656/SentimentModel/rebalance` to execute WSB trades using latest scrape
 
+Feel free to fork and add your own models and play around with `app.py`. This repo is messy and was built quickly, so it is prone to bugs. Huge shoutout to @JosephLai241 for making this possible. Feel free to PR, although I likely won't be maintaining this closely.
 
+DISCLAIMER: DO NOT TRADE THIS WITH REAL MONEY. ONLY USE YOUR ALPACA PAPER ACCOUNT. I AM NOT RESPONSIBLE FOR ANY FINANCIAL OUTCOMES DUE TO USE OF THIS REPO.
 
 # Please See Below for all URS related documentation!
      __  __  _ __   ____  
