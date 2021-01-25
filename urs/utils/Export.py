@@ -7,6 +7,7 @@ import re
 
 from . import Global
 
+
 class NameFile():
     """
     Methods for naming the exported files.

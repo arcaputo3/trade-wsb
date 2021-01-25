@@ -2,22 +2,11 @@
 #                               Redditor Scraping
 #===============================================================================
 import praw
-
-from colorama import (
-    init, 
-    Fore, 
-    Style)
+from colorama import Fore, Style, init
 from prawcore import PrawcoreException
 
-from . import (
-    Cli, 
-    Export, 
-    Global, 
-    Titles, 
-    Validation)
-from .Logger import (
-    LogExport, 
-    LogScraper)
+from . import Cli, Export, Global, Titles, Validation
+from .Logger import LogExport, LogScraper
 
 ### Automate sending reset sequences to turn off color changes at the end of 
 ### every print.

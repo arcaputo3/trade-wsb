@@ -1,13 +1,14 @@
-import os
 import json
+import os
+from collections import Counter
+
 import nltk
 import numpy as np
 import pandas as pd
 import pypfopt as po
-from collections import Counter
-from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from nltk.tokenize import RegexpTokenizer
 
 from account.Account import Account
 

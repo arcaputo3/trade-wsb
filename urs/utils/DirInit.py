@@ -5,6 +5,7 @@ import os
 
 from . import Global
 
+
 class InitializeDirectory():
     """
     On the first run, create the `scrapes/` directory. Then make a sub-directory 

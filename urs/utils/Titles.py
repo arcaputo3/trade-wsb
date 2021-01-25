@@ -1,10 +1,7 @@
 #===============================================================================
 #                                   Titles
 #===============================================================================
-from colorama import (
-    init, 
-    Fore, 
-    Style)
+from colorama import Fore, Style, init
 
 ### Automate sending reset sequences to turn off color changes at the end of 
 ### every print.

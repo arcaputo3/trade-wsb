@@ -1,6 +1,5 @@
 import argparse
 import sys
-
 from io import StringIO
 
 from urs.utils import Basic, Global

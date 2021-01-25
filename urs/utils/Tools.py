@@ -1,21 +1,10 @@
 #===============================================================================
 #                   All Scrapers and Validation/Args Checking
 #===============================================================================
-from colorama import (
-    init, 
-    Fore, 
-    Style)
+from colorama import Fore, Style, init
 
-from . import (
-    Basic, 
-    Cli, 
-    Comments, 
-    Global, 
-    Redditor, 
-    Subreddit, 
-    Titles, 
-    Validation
-)
+from . import (Basic, Cli, Comments, Global, Redditor, Subreddit, Titles,
+               Validation)
 
 ### Automate sending reset sequences to turn off color changes at the end of 
 ### every print.
@@ -57,4 +46,3 @@ class Run():
         ### Run basic Subreddit scraper.
         elif self._args.basic:
             Basic.RunBasic.run(self._args, self._parser, self._reddit)
-        

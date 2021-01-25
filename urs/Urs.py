@@ -8,6 +8,7 @@ Universal Reddit Scraper 3.1.0.
 @contact: urs_project@protonmail.com
 """
 import os
+
 import praw
 
 from utils.Logger import LogMain

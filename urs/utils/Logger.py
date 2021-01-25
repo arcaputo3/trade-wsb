@@ -4,16 +4,10 @@
 import logging
 import time
 
-from colorama import (
-    init, 
-    Fore, 
-    Style)
+from colorama import Fore, Style, init
 from prawcore import PrawcoreException
 
-from . import (
-    DirInit, 
-    Global, 
-    Titles)
+from . import DirInit, Global, Titles
 
 ### Automate sending reset sequences to turn off color changes at the end of 
 ### every print.

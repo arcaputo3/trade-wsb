@@ -1,7 +1,8 @@
 import argparse
-import pytest
 import re
 import sys
+
+import pytest
 
 from urs.utils import Cli, Global
 

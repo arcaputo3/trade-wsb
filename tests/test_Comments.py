@@ -207,4 +207,3 @@ class TestWriteWriteMethod():
 
     def test_write(self):
         pass
-

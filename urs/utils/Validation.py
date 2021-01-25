@@ -3,20 +3,12 @@
 #===============================================================================
 import praw
 import requests
-
-from colorama import (
-    init, 
-    Fore, 
-    Style)
+from colorama import Fore, Style, init
 from praw import models
-from prawcore import (
-    NotFound, 
-    PrawcoreException)
+from prawcore import NotFound, PrawcoreException
 from prettytable import PrettyTable
 
-from . import (
-    Global, 
-    Titles)
+from . import Global, Titles
 from .Logger import LogError
 
 ### Automate sending reset sequences to turn off color changes at the end of 

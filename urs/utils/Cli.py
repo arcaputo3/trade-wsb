@@ -5,15 +5,9 @@ import argparse
 import re
 import sys
 
-from colorama import (
-    init, 
-    Fore, 
-    Style)
+from colorama import Fore, Style, init
 
-from . import (
-    Global, 
-    Titles, 
-    Validation)
+from . import Global, Titles, Validation
 from .Logger import LogError
 
 ### Automate sending reset sequences to turn off color changes at the end of 
