@@ -1,8 +1,12 @@
+
+
+
+# Please See Below for all URS related documentation!
      __  __  _ __   ____  
-    /\ \/\ \/\`'__\/',__\ 
+    /\ \/\ \/\`'__\/',__\
     \ \ \_\ \ \ \//\__, `\
      \ \____/\ \_\\/\____/
-      \/___/  \/_/ \/___/... Universal Reddit Scraper 
+      \/___/  \/_/ \/___/... Universal Reddit Scraper
 
 ![GitHub top language](https://img.shields.io/github/languages/top/JosephLai241/URS?logo=Python)
 [![PRAW Version](https://img.shields.io/badge/PRAW-7.0.0-red?logo=Reddit)][PRAW]
@@ -15,7 +19,7 @@
 [![Email](https://img.shields.io/badge/Email-urs__project%40protonmail.com-informational?logo=ProtonMail)][URS Project Email]
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-blue)][Say Thanks!]
 
-<p align="center"> 
+<p align="center">
     <img src="https://github.com/JosephLai241/URS/blob/master/.github/Screenshots/Demo%20GIFs/DEMO.gif">
 </p>
 
@@ -40,15 +44,15 @@
 
 # Introduction
 
-This is a universal Reddit scraper that can scrape Subreddits, Redditors, and comments from submissions. 
+This is a universal Reddit scraper that can scrape Subreddits, Redditors, and comments from submissions.
 
 Written in Python and utilizes the official Reddit API ([ `PRAW` ][PRAW]).
 
-Run `pip install -r requirements.txt` to get all project dependencies. 
+Run `pip install -r requirements.txt` to get all project dependencies.
 
-You will need your own Reddit account and API credentials for PRAW. See the [Getting Started](#getting-started) section for more information. 
+You will need your own Reddit account and API credentials for PRAW. See the [Getting Started](#getting-started) section for more information.
 
-***NOTE:*** `PRAW` is currently supported on Python 3.5+. This project was tested with Python 3.8.2. 
+***NOTE:*** `PRAW` is currently supported on Python 3.5+. This project was tested with Python 3.8.2.
 
 **Whether you are using URS for enterprise or personal use, I am very interested in hearing about your use cases and how it has helped you achieve a goal. Please send me an email or leave a note by clicking on the Email or Say Thanks! badge. I look forward to hearing from you!**
 
@@ -70,13 +74,13 @@ You can suggest new features or changes by going to the Issues tab and filling o
 
 You are also more than welcome to create a pull request, adding additional features, improving runtime, or streamlining existing code. If the pull request is approved, I will merge the pull request into the master branch and credit you for contributing to this project.
 
-Make sure you follow the contributing guidelines when creating a pull request. See the [Contributing][Contributing Guide] document for more information. 
+Make sure you follow the contributing guidelines when creating a pull request. See the [Contributing][Contributing Guide] document for more information.
 
 # URS Overview
 
-Scrape speeds may vary depending on the number of results returned for Subreddit or Redditor scraping, or the submission's popularity (total number of comments) for submission comments scraping. It is also impacted by your internet connection speed. 
+Scrape speeds may vary depending on the number of results returned for Subreddit or Redditor scraping, or the submission's popularity (total number of comments) for submission comments scraping. It is also impacted by your internet connection speed.
 
-All exported files are saved within the `scrapes/` directory and stored in a sub-directory labeled with the date. These directories are automatically created when you run URS. 
+All exported files are saved within the `scrapes/` directory and stored in a sub-directory labeled with the date. These directories are automatically created when you run URS.
 
 ## Getting Started
 
@@ -84,7 +88,7 @@ It is very quick and easy to get Reddit API credentials. Refer to [my guide][How
 
 ## A Table of All Subreddit, Redditor, and Submission Comments Attributes
 
-These attributes are included in each scrape. 
+These attributes are included in each scrape.
 
 | Subreddits    | Redditors                      | Submission Comments |
 |---------------|--------------------------------|---------------------|
@@ -111,7 +115,7 @@ These attributes are included in each scrape.
 | &nbsp;        | \*Hidden (may be forbidden)    |                     |
 | &nbsp;        | \*Saved (may be forbidden)     |                     |
 
-\*Includes additional attributes; see [Redditors](#redditors) section for more information. 
+\*Includes additional attributes; see [Redditors](#redditors) section for more information.
 
 ## Subreddits
 
@@ -119,7 +123,7 @@ These attributes are included in each scrape.
 
 \*This GIF is uncut.
 
-`$ ./Urs.py -r SUBREDDIT [H|N|C|T|R|S] N_RESULTS_OR_KEYWORDS --FILE_FORMAT` 
+`$ ./Urs.py -r SUBREDDIT [H|N|C|T|R|S] N_RESULTS_OR_KEYWORDS --FILE_FORMAT`
 
 You can specify Subreddits, the submission category, and how many results are returned from each scrape. I have also added a search option where you can search for keywords within a Subreddit.
 
@@ -134,12 +138,12 @@ These are the submission categories:
 
 Time filters may be applied to some categories. Here is a table of the categories on which you can apply a time filter as well as the valid time filters.
 
-| Categories    | Time Filters  | 
+| Categories    | Time Filters  |
 |---------------|---------------|
 | Controversial | All (default) |
 | Search        | Day           |
 | Top           | Hour          |
-| &nbsp;        | Month         | 
+| &nbsp;        | Month         |
 | &nbsp;        | Week          |
 | &nbsp;        | Year          |
 
@@ -151,7 +155,7 @@ If no time filter is specified, the default time filter `all` is applied. The Su
 
 The file names will follow this format: `"r-[SUBREDDIT]-[POST_CATEGORY]-[N_RESULTS]-result(s).[FILE_FORMAT]"`
 
-If you searched for keywords, file names are formatted like so: `"r-[SUBREDDIT]-Search-'[KEYWORDS]'.[FILE_FORMAT]"` 
+If you searched for keywords, file names are formatted like so: `"r-[SUBREDDIT]-Search-'[KEYWORDS]'.[FILE_FORMAT]"`
 
 If you specified a time filter, `-past-[TIME_FILTER]` will be appended to the file name before the file format like so: `"r-[SUBREDDIT]-[POST_CATEGORY]-[N_RESULTS]-result(s)-past-[TIME_FILTER].[FILE_FORMAT]"` or `"r-[SUBREDDIT]-Search-'[KEYWORDS]'-past-[TIME_FILTER].[FILE_FORMAT]"`
 
@@ -161,7 +165,7 @@ If you specified a time filter, `-past-[TIME_FILTER]` will be appended to the fi
 
 \*This GIF has been cut for demonstration purposes.
 
-`$ ./Urs.py -u USER N_RESULTS --FILE_FORMAT` 
+`$ ./Urs.py -u USER N_RESULTS --FILE_FORMAT`
 
 **Designed for JSON only.**
 
@@ -193,11 +197,11 @@ Of these Redditor attributes, the following will include additional attributes:
 | &nbsp;                                                                                             | Replying to (title of submission or comment) |
 | &nbsp;                                                                                             | In Subreddit (Subreddit name)                |
 
-***NOTE:*** If you are not allowed to access a Redditor's lists, PRAW will raise a 403 HTTP Forbidden exception and the program will just append a "FORBIDDEN" underneath that section in the exported file. 
+***NOTE:*** If you are not allowed to access a Redditor's lists, PRAW will raise a 403 HTTP Forbidden exception and the program will just append a "FORBIDDEN" underneath that section in the exported file.
 
-***NOTE:*** The number of results returned are applied to all attributes. I have not implemented code to allow users to specify different number of results returned for individual attributes. 
+***NOTE:*** The number of results returned are applied to all attributes. I have not implemented code to allow users to specify different number of results returned for individual attributes.
 
-The file names will follow this format: `"u-[USERNAME]-[N_RESULTS]-result(s).[FILE_FORMAT]"` 
+The file names will follow this format: `"u-[USERNAME]-[N_RESULTS]-result(s).[FILE_FORMAT]"`
 
 ## Submission Comments
 
@@ -206,11 +210,11 @@ The file names will follow this format: `"u-[USERNAME]-[N_RESULTS]-result(s).[FI
 
 \*These GIFs have been cut for demonstration purposes.
 
-`$ ./Urs.py -c URL N_RESULTS --FILE_FORMAT` 
+`$ ./Urs.py -c URL N_RESULTS --FILE_FORMAT`
 
 **Designed for JSON only.**
 
-You can also scrape comments from submissions and specify the number of results returned. 
+You can also scrape comments from submissions and specify the number of results returned.
 
 Comments are sorted by "Best", which is the default sorting option when you visit a submission.
 
@@ -221,15 +225,15 @@ There are two ways you can scrape comments: structured or raw. This is determine
 | Structured  | N_RESULTS >= 1 |
 | Raw         | N_RESULTS = 0  |
 
-Structured scrapes resemble comment threads on Reddit and will include down to third-level comment replies. 
+Structured scrapes resemble comment threads on Reddit and will include down to third-level comment replies.
 
 Raw scrapes do not resemble comment threads, but returns all comments on a submission in level order: all top-level comments are listed first, followed by all second-level comments, then third, etc.
 
 Of all scrapers included in this program, this usually takes the longest to execute. PRAW returns submission comments in level order, which means scrape speeds are proportional to the submission's popularity.
 
-***NOTE:*** You cannot specify the number of raw comments returned. The program with scrape all comments from the submission. 
+***NOTE:*** You cannot specify the number of raw comments returned. The program with scrape all comments from the submission.
 
-The file names will follow this format: `"c-[POST_TITLE]-[N_RESULTS]-result(s).[FILE_FORMAT]"` 
+The file names will follow this format: `"c-[POST_TITLE]-[N_RESULTS]-result(s).[FILE_FORMAT]"`
 
 ## Exporting
 
@@ -245,11 +249,11 @@ Here are my recommendations for scrape exports.
 
 Subreddit scrapes will work well with either format.
 
-JSON is the more practical option for Redditor and submission comments scraping, which is why I have designed these scrapers to work best in this format. 
+JSON is the more practical option for Redditor and submission comments scraping, which is why I have designed these scrapers to work best in this format.
 
-It is much easier to read the scrape results since Redditor scraping returns attributes that include additional submission or comment attributes. 
+It is much easier to read the scrape results since Redditor scraping returns attributes that include additional submission or comment attributes.
 
-Comments scraping is especially easier to read because structured exports look similar to threads on Reddit. You can process all the information pertaining to a comment much quicker compared to CSV. 
+Comments scraping is especially easier to read because structured exports look similar to threads on Reddit. You can process all the information pertaining to a comment much quicker compared to CSV.
 
 You can still export Redditor data and submission comments to CSV, but you will be disappointed with the results.
 
@@ -257,14 +261,14 @@ You can still export Redditor data and submission comments to CSV, but you will 
 
 # Some Linux Tips
 
-* You can further simplify running the program by making the program executable: `sudo chmod +x Urs.py` 
-* Make sure the shebang at the top of `Urs.py` matches the location in which your Python3 is installed. You can use `which python` and then `python --version` to check. The default shebang is `#!/usr/bin/python`. 
-* Now you will only have to prepend `./` to run URS. 
-  + `./Urs.py ...` 
+* You can further simplify running the program by making the program executable: `sudo chmod +x Urs.py`
+* Make sure the shebang at the top of `Urs.py` matches the location in which your Python3 is installed. You can use `which python` and then `python --version` to check. The default shebang is `#!/usr/bin/python`.
+* Now you will only have to prepend `./` to run URS.
+  + `./Urs.py ...`
 * Troubleshooting
-  + You will have to set the fileformat to UNIX if you run URS with `./` and are greeted with a bad interpreter error. I did this using Vim. 
+  + You will have to set the fileformat to UNIX if you run URS with `./` and are greeted with a bad interpreter error. I did this using Vim.
 
-	``` 
+	```
     $ vim Urs.py
     :set fileformat=unix
     :wq!
@@ -280,15 +284,15 @@ You can still export Redditor data and submission comments to CSV, but you will 
 
 # Releases
 
-| Release Date | Version | Changelog | 
+| Release Date | Version | Changelog |
 |--------------|---------|-----------|
 | **May 25, 2019** | URS v1.0 | <ul> <li>Its inception.</li> </ul> |
 | **July 29, 2019** | URS v2.0 | <ul> <li>Now **includes CLI support**!</li> </ul> |
-| **December 28, 2019** | URS v3.0 (beta) | <ul> <li>Added **JSON** export.</li> <li>Added **Redditor Scraping**.</li> <li>Comments scraping is still under construction.</li> </ul> | 
+| **December 28, 2019** | URS v3.0 (beta) | <ul> <li>Added **JSON** export.</li> <li>Added **Redditor Scraping**.</li> <li>Comments scraping is still under construction.</li> </ul> |
 | **December 31, 2019** | URS v3.0 (Official) | <ul> <li>**Comments scraping is now working**!</li> <li>**Added additional exception handling** for creating filenames.</li> <li>Minor code reformatting.</li> <li>**Simplified verbose output**.</li> <li>**Added an additional submission attribute** when scraping Redditors.</li> <li>Happy New Year!</li> </ul> |
 | **January 15, 2020** | URS v3.0 (Final Release) | <ul> <li>Numerous changes to Readme.</li> <li>Minor code reformatting.</li> <li>**Fulfilled community standards** by adding the following docs:</li> <ul> <li>[Contributing Guide][Contributing Guide]</li> <li>[Pull Request Template][Pull Request Template]</li> <li>Issue templates:</li> <ul> <li>[Bug Report][Bug Report]</li> <li>[Feature Request][Feature Request]</li> </ul> <li>[Code of Conduct][Code of Conduct]</li> <li>[License][License]</li> </ul> </ul> |
 | **June 22, 2020** | URS v3.1.0 | <ul> <li>***Major*** code refactor. **Applied OOP concepts** to existing code and rewrote methods in attempt to **improve readability, maintenance, and scalability**.</li> <li>**New in 3.1.0**:</li> <ul> <li>**Scrapes will now be exported to the `scrapes/` directory** within a subdirectory corresponding to the date of the scrape. These directories are automatically created for you when you run URS.</li> <li>Added **log decorators** that record what is happening during each scrape, which scrapes were ran, and any errors that might arise during runtime in the log file `scrapes.log`. The log is stored in the same subdirectory corresponding to the date of the scrape.</li> <li>**Replaced bulky titles with minimalist titles** for a cleaner look.</li> <li>**Added color to terminal output**.</li> </ul> <li>**Improved naming convention** for scripts.</li> <li>Integrating **Travis CI** and **Codecov**.</li> <li>Updated community documents located in the `.github/` directory: `BUG_REPORT`, `CONTRIBUTING`, `FEATURE_REQUEST`, `PULL_REQUEST_TEMPLATE`, and `STYLE_GUIDE`</li> <li>Numerous changes to Readme. The most significant change was **splitting and storing walkthroughs in `docs/`**.</li> </ul> |
-| **June 27, 2020** | URS v3.1.1 | <ul> <li>**Added time filters for Subreddit categories (Controversial, Search, Top)**.</li> <li>**Updated README to reflect new changes**.</li> <li>**Updated style guide**. Made **minor formatting changes to scripts** to reflect new rules.</li> <li>Performed **DRY code review**.</li> </ul> | 
+| **June 27, 2020** | URS v3.1.1 | <ul> <li>**Added time filters for Subreddit categories (Controversial, Search, Top)**.</li> <li>**Updated README to reflect new changes**.</li> <li>**Updated style guide**. Made **minor formatting changes to scripts** to reflect new rules.</li> <li>Performed **DRY code review**.</li> </ul> |
 
 <!-- BADGES: Links for the badges at the top of the README -->
 [Codecov]: https://codecov.io/gh/JosephLai241/URS

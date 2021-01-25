@@ -3,12 +3,9 @@ services:
   app:
     build: .
     environment:
-      ALPACA_PAPER_KEY: somekey
-      ALPACA_PAPER_SECRET_KEY: somekey
-      ALPACA_PAPER_URL: https://paper-api.alpaca.markets
-      ALPACA_LIVE_KEY: somekey
-      ALPACA_LIVE_SECRET_KEY: somekey
-      ALPACA_LIVE_URL: https://api.alpaca.markets
+      ALPACA_KEY: somekey
+      ALPACA_SECRET_KEY: somekey
+      ALPACA_URL: https://paper-api.alpaca.markets
       REDDIT_CLIENT_ID: someid                  # Personal use script (14 characters).
       REDDIT_CLIENT_SECRET: somesecret          # Secret key (27 characters).
       REDDIT_USER_AGENT: someagent              # App name.
